@@ -1,22 +1,30 @@
+// selected div to display data over DOM
 let userCard = document.querySelector(".userCard");
+// selected botton container to show paginated button
 let pageBtn = document.querySelector(".pageBtn");
+// base url to fetch data from
 let url = `https://jsonplaceholder.typicode.com/users`;
 
+// function to fetch data from given API
 const getData = async(url, queryParams="") =>{
     try {
         let res = await fetch(`${url}${queryParams}`);
         console.log(res);
+        // function called for applying pagination
         pagination();
         let data = await res.json();
-        console.log(data);
-        displayData(data);
+        // console.log(data);
+        // displayData(data);
     } catch (error) {
+        // handling error
         console.log(error);
     }
 }
 
+// global function called
 getData(url, "?_page=1&_limit=6");
 
+// function to display fetched data on DOM
 const displayData = (data) =>{
     userCard.innerHTML = "";
     data.forEach(({name, address, company ,username, email, phone, website})=>{
@@ -83,6 +91,7 @@ const displayData = (data) =>{
     
 }
 
+// pagination function to apply pagination
 const pagination = () => {
     pageBtn.innerHTML = "";
     let total = Math.ceil(10/6);
