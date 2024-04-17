@@ -14,7 +14,7 @@ const getData = async(url, queryParams="") =>{
         pagination();
         let data = await res.json();
         // console.log(data);
-        // displayData(data);
+        displayData(data);
     } catch (error) {
         // handling error
         console.log(error);
