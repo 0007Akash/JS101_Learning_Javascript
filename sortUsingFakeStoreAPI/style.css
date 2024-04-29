@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headText{
+    margin-top: 40px;
+}
+
+.userCard{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    row-gap: 50px;
+    margin-top: 50px;
+}
+
+.userCard > div{
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 0 12px rgba(0,50,100,0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+#addrId{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#commonDiv{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+#commonDiv div{
+    width: 200px;
+    height: 180px;
+    box-shadow: 0 0 10px rgba(0,100,0,0.3);
+    border-radius: 20px;
+    padding: 10px;
+}
+#fDiv{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 0 10px rgba(0,100,0,0.3);
+    border-radius: 20px;
+    
+}
+
+#btnId{
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    border: none;
+    margin: 5px;
+    margin-top: 40px;
+    
+    font-size: 18px;
+    
+}
+
+select{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 16px;
+}
